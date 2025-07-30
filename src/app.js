@@ -28,7 +28,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: ['http://localhost:5173', 'https://your-vercel-app-name.vercel.app'],
+    origin: ['http://localhost:5173', 'https://wild-oasis-dqsq06zts-shivamsurroach10-7381s-projects.vercel.app'],
     credentials: true,
   })
 );
