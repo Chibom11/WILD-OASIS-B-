@@ -1,0 +1,39 @@
+{
+  "name": "cabin-users",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chibom11/cabin-users.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chibom11/cabin-users/issues"
+  },
+  "homepage": "https://github.com/Chibom11/cabin-users#readme",
+  "description": "",
+  "dependencies": {
+    "@faker-js/faker": "^9.8.0",
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.6.1",
+    "cookie-parser": "^1.4.7",
+    "cookieparser": "^0.1.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.15.0",
+    "mongoose-paginate-v2": "^1.9.0",
+    "multer": "^2.0.0",
+    "razorpay": "^2.9.6",
+    "router": "^2.2.0"
+  }
+}
