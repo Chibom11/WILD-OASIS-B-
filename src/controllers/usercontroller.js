@@ -191,10 +191,11 @@ export const loginUser=async (req,res)=>{
 
     const loggedInUser=await User.findById(user._id).select("-password -refreshToken");// .select deselects the -password and -refreshtoken
 
-    const options={
-        httpOnly:true,
-        secure:process.env.NODE_ENV==='production',
-    }
+     const options = {
+    httpOnly: true,
+    secure: true, 
+    sameSite: 'none', 
+  }
     return res.status(200).cookie('refreshToken',refreshToken,options).cookie('accessToken',accessToken,options).json({
         success:true,
         message:"User logged in successfully",
@@ -229,10 +230,11 @@ export const refreshAccessToken=async(req,res)=>{
 
     await user.save({validateBeforeSave:false});
 
-    const options={
-        httpOnly:true,
-        secure:process.env.NODE_ENV==='production'
-    }
+      const options = {
+    httpOnly: true,
+    secure: true, 
+    sameSite: 'none', 
+  }
 
     return res.status(200).cookie('refreshToken',newRefreshToken,options).cookie('accessToken',newAccessToken,options).json({message:"Access token refreshed successfully",success:true,accessToken:newAccessToken,refreshToken:newRefreshToken})
 }
